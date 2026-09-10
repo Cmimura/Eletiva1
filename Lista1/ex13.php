@@ -3,27 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exercício 7</title>
+<title>Exercício 3</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
 </head>
 <body> 
 <div class="container py-3">
-<h1>Exercício 7</h1>
+<h1>Exercício 3</h1>
 <form method="post">
 <div class="mb-3">
-              <label for="alt" class="form-label">Digite a altura do retângulo</label>
-              <input type="number" id="alt" name="alt" class="form-control" required="">
-            </div><div class="mb-3">
-              <label for="lar" class="form-label">Digite a largura do retângulo</label>
-              <input type="number" id="lar" name="lar" class="form-control" required="">
+              <label for="num1" class="form-label">Digite o valor em kilometros</label>
+              <input type="number" id="num1" name="num1" class="form-control" required="">
             </div>
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 <?php
-    $alt = $_POST["alt"] ?? 0;
-    $lar = $_POST["lar"] ?? 0;
-    $area = $alt * $lar;
-    echo "<p>A área do retângulo é: $area</p>";
+    $num1 = $_POST["num1"] ?? 0;
+    $milhas = $num1 * 100;
+    echo "<p>A conversão de $num1 kilometros em milhas é: $milhas</p>";
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </div>
