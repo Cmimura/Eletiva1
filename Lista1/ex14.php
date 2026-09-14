@@ -15,15 +15,16 @@
               <input type="number" id="peso" name="peso" class="form-control" required="">
             </div><div class="mb-3">
               <label for="alt" class="form-label">Digite a sua altura</label>
-              <input type="double" id="alt" name="alt" class="form-control" required="">
+              <input type="decimal" id="alt" name="alt" class="form-control" required="">
             </div>
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 <?php
     $peso = $_POST["peso"] ?? 0;
-    $alt = $_POST["alt"];
-    $imc = $alt ** 2;
-    echo "<p>O seu imc é: $imc $alt</p>";
+    $alt = $_POST["alt"] ?? 0;
+    $imc = $peso / ($alt ** 2);
+    $result =  number_format($imc, 1, ',' , '.');
+    echo "<p>O seu imc é: $result</p>";
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </div>

@@ -26,8 +26,8 @@
     $capital = $_POST["capital"] ?? 0;
     $taxa = $_POST["taxa"] ?? 0;
     $periodo = $_POST["periodo"] ?? 0;
-    $jsimples = ($capital * $taxa * $periodo);
-    echo "<p>Os resultados dos juros simples são: $jsimples</p>";
+    $jsimples = ($capital * ($taxa / 100) * $periodo);
+    echo "<p>Os resultados dos juros simples são: R$$jsimples</p>";
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </div>
